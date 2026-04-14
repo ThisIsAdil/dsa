@@ -135,7 +135,25 @@ int main()
 
     // HOME WORK
     // 1. Figure out how to find if a number is power of 2 without any loop (can be done using bits)
+    int num;
+    cout << "enter a number: ";
+    cin >> num;
+
+    // if ((num & num - 1) == 0)
+    //     cout << num << " is a power of two" << endl;
+    // else
+    //     cout << num << " is not a power of two" << endl;
+
     // 2. Write a Function to reverse an interger n
+
+    int revNum = 0;
+    while (num > 0)
+    {
+        int lastDigit = num % 10;
+        revNum = revNum * 10 + lastDigit;
+        num /= 10;
+    }
+    cout << revNum << endl;
 
     return 0;
 }
